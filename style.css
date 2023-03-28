@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tamnoPlava: rgb(29, 82, 124);
+  --svetloPlava: #459ad3;
+  --orange: rgb(253, 127, 69);
+  --tamnoSiva: #3c3b3c;
+  --svetloSiva: lightgray;
+  --bela: #fff;
+  --transition: .3s;
+  --padding: 100px 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  /* position: sticky;
+  top: 20px; */
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: var(--tamnoPlava);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 15%;
+  margin: 0.5rem 0;
+}
+
+.dugme {
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1em 3em;
+  background-color: var(--tamnoPlava);
+  border: 1px solid var(--tamnoPlava);
+  color: var(--bela);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.dugme:hover {
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/**************
+Header
+***************/
+header {
+  background: linear-gradient(to right, var(--orange), var(--tamnoPlava));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+}
+
+header a {
+  color: var(--bela);
+  transition: var(--transition);
+}
+
+header a:hover {
+  color: var(--svetloSiva);
+}
+
+header .logo a h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--bela);
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  text-transform: uppercase;
+  margin-left: 2.5rem;
+}
+
+/**************
+Display property sekcija
+***************/
+.display p span {
+  background-color: aqua;
+  color: red;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+/**************
+Pozicioniranje section
+***************/
+.pozicioniranje {
+  padding: var(--padding);
+  /* position: relative; */
+}
+
+.pozicioniranje .spoljasnji {
+  background-color: antiquewhite;
+  height: 30vh;
+  position: relative;
+}
+
+.pozicioniranje .spoljasnji .unutrasnji {
+  background-color: rgba(69, 154, 211, 0.7098039216);
+  padding: 1rem;
+  position: static;
+  position: relative;
+  position: absolute;
+  /* position: fixed; */
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+/**************
+Hero section
+***************/
+.hero {
+  background: linear-gradient(rgba(29, 82, 124, 0.8), rgba(253, 127, 69, 0.8)), url(img/baloon.jpg);
+  background-position: top center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--bela);
+}
+
+.hero h1 strong {
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero .dugme {
+  background-color: transparent;
+  border: 1px solid var(--bela);
+}
+
+.hero .dugme:hover {
+  background-color: var(--bela);
+  color: var(--tamnoSiva);
+}
+
+/**************
+Fiksno pozicionirane ikonice
+***************/
+.fiksneIkonice {
+  position: fixed;
+  top: calc(50% - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: bisque;
+  height: 150px;
+}
+
+.fiksneIkonice i {
+  color: var(--orange);
+  font-size: 20px;
+}
+
+/**************
+About
+***************/
+.about {
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about .about-text {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about .about-text hr {
+  background-color: var(--tamnoPlava);
+}
+
+.about .about-text button {
+  margin-top: 1rem;
+}
+
+.about .about-image {
+  flex: 0 0 48%;
+}
+
+.about .about-image img {
+  box-shadow: 10px 10px var(--tamnoPlava);
+}
+
+/**************
+Services
+***************/
+.services {
+  padding: var(--padding);
+  background: linear-gradient(rgba(29, 82, 124, 0.8), rgba(29, 82, 124, 0.8)), url(img/header.jpg);
+  background-attachment: fixed;
+  color: var(--bela);
+}
+.services .container {
+  display: flex;
+  justify-content: space-between;
+}
+.services .container .services-icons {
+  flex: 0 0 48%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.services .container .services-icons i {
+  font-size: 3rem;
+  color: var(--orange);
+  flex: 0 0 50%;
+}
+.services .container .services-text {
+  flex: 0 0 48%;
+}
+.services .container .services-text h2 {
+  color: var(--bela);
+}
+.services .container .services-text hr {
+  background-color: var(--orange);
+}
+.services .container .services-text p {
+  padding: 1rem 0;
+}
+
+/**************
+Blog
+***************/
+.blog {
+  padding: var(--padding);
+  text-align: center;
+}
+
+.blog hr {
+  background-color: var(--orange);
+  margin: 1rem auto 2rem;
+}
+
+.blog .container {
+  display: flex;
+  /* gap: 20px; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog .container article {
+  flex: 0 0 32%;
+  background-color: rgb(195, 244, 244);
+  padding: 0.5rem;
+}
+
+.blog .container article .blog-image {
+  position: relative;
+}
+
+.blog .container article .blog-image .blog-image-category {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--tamnoPlava);
+  color: var(--bela);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.blog .container article .meta {
+  background-color: var(--orange);
+  color: var(--bela);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.blog .container article h3 {
+  font-size: 1.5rem;
+  color: var(--tamnoPlava);
+  margin: 0.5rem 0;
+}
+
+.blog .container article .dugme {
+  margin: 1rem 0;
+}
+
+/**************
+Footer
+***************/
+footer {
+  background: linear-gradient(rgba(29, 82, 124, 0.8), rgba(29, 82, 124, 0.8)), url(img/baloon.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: var(--padding);
+  color: var(--bela);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container article {
+  flex: 0 0 32%;
+}
+
+footer .container article h3 {
+  margin-bottom: 1rem;
+}
+
+/* footer .container article ul ::marker{
+    list-style-type: square;
+    list-style-position: inside;
+
+    color: var(--orange);
+    content: '-> ';
+    font-size: 20px;
+} */
+footer .container article ul li {
+  /* text-align: center; */
+  color: var(--svetloPlava);
+}
+
+/**************
+Bottom bar
+***************/
+.bottomBar {
+  background-color: var(--tamnoPlava);
+  color: var(--bela);
+  padding: 1rem;
+  text-align: center;
+}
+
+.bottomBar p a {
+  color: var(--svetloSiva);
+}
+
+/**************
+RESPONSIVE
+***************/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  /* .about{
+      flex-wrap: wrap;
+  } */
+  .about .about-text {
+    flex: 0 0 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .about .about-image {
+    flex: 0 0 100%;
+  }
+  /* .about{
+      flex-direction: column;
+  } */
+  .services .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .services .container .services-text hr {
+    margin: 1rem auto;
+  }
+  .services .container .services-icons i {
+    margin: 3rem 0;
+  }
+  .blog .container article {
+    flex: 0 0 100%;
+    margin-bottom: 3rem;
+  }
+  footer .container article {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .container {
+    width: 95%;
+  }
+  header {
+    flex-direction: column;
+  }
+  header nav ul li a {
+    margin: 1rem 2rem 0;
+    display: inline-block;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+@media print {
+  .about .about-image {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
